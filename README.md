@@ -23,3 +23,15 @@ java -jar build/libs/upgrade-startup-*.jar -md -f /path/to/client/workspace
 ```
 
 For more details about this project, refer to the documentation available in Confluence: [Module deployer](https://liferay.atlassian.net/wiki/spaces/ECU/pages/3676668235/Module+deployer?force_transition=3f17c7e0-db73-48a7-89a6-003d039d48a6)
+
+2 - To use the latest published version, run:
+
+```
+curl -o- https://raw.githubusercontent.com/liferay-upgrades/upgrade-startup-deployer/master/install.sh | sh
+```
+
+to download and install the latest version. It will include a bash function named "startupDeployerFunctionName" and an alias called "sdp" to execute the tool. You might run the tool without parameters to get the available options.
+To test the installation, after reloading your `.bashrc`, run in your terminal:
+```
+sdp -f /path/to/client/workspace
+```
